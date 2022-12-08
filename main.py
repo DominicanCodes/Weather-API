@@ -10,9 +10,9 @@ def home():
 @app.route("/api/v1/<station>/<date>")
 def about(station, date):
     temperature = 26
-    return {"station": station,
-            "date": date,
-            "Temperature": temperature}
+    return {"date": date,
+            "station": station,
+            "temperature": temperature}
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True) # port=5001 if you want to run other apps
